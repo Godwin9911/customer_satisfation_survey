@@ -75,8 +75,6 @@ class TwilioController
 
                 error_log($phoneNumber);
 
-                error_log($phoneNumber);
-
                 $call = $twilio->calls->create(
                     $phoneNumber,
                     $twilioPhoneNumber,
@@ -135,7 +133,7 @@ class TwilioController
     public function gather()
     {
         // Retrieve the gathered digits from POST data
-        $digits = "1";
+        $digits = null;
         if (isset($_GET['Digits'])) {
             $digits = $_GET['Digits'];
         } elseif (isset($_POST['Digits'])) {
