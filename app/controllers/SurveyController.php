@@ -1,8 +1,9 @@
 <?php
-require_once '../app/models/Survey.php';
-require_once '../app/models/Question.php';
-require_once '../app/models/SurveyCustomer.php';
-require_once '../app/controllers/TwilioController.php';
+
+namespace App\Controllers;
+
+use App\Models\{Survey, Question, SurveyCustomer, SurveyCustomerRating};
+use App\Controllers\TwilioController;
 
 class SurveyController
 {

@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Models;
+
 class Question
 {
     private $pdo;
@@ -12,7 +15,7 @@ class Question
     {
         $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE survey_id = ?');
         $stmt->execute([$survey_id]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
     }
 

@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Models;
+
 class SurveyCustomerRating
 {
     private $pdo;
@@ -15,7 +18,7 @@ class SurveyCustomerRating
             JOIN questions ON survey_customers_rating.question_id = questions.id
             WHERE survey_customers_rating.survey_id = ?');
         $stmt->execute([$survey_id]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
     }
 

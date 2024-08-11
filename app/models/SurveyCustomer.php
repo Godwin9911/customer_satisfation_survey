@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Models;
+
 class SurveyCustomer
 {
     private $pdo;
@@ -8,11 +11,11 @@ class SurveyCustomer
         $this->pdo = $pdo;
     }
 
-    public function findByPhoneAndsurvey($phone, $survey_id, )
+    public function findByPhoneAndsurvey($phone, $survey_id)
     {
         $stmt = $this->pdo->prepare('SELECT * FROM survey_customers WHERE survey_id = ? AND phone = ?');
         $stmt->execute([$survey_id, $phone]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
     public function create($phone, $survey_id)

@@ -1,10 +1,8 @@
 <?php
-require_once '../vendor/autoload.php';
-require_once '../app/models/Survey.php';
-require_once '../app/models/Question.php';
-require_once '../app/models/SurveyCustomer.php';
-require_once '../app/models/SurveyCustomerRating.php';
 
+namespace App\Controllers;
+
+use App\Models\{Survey, Question, SurveyCustomer, SurveyCustomerRating};
 use Twilio\Rest\Client;
 use Twilio\TwiML\VoiceResponse;
 
