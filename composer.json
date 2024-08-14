@@ -2,14 +2,14 @@
   "name": "godwin_agedah/mvc_crud_php",
   "autoload": {
     "psr-4": {
-      "GodwinAgedah\\MvcCrudPhp\\": "src/",
       "App\\": "app/",
       "App\\Models\\": "app/models/",
-      "App\\Controllers\\": "app/controllers/"
+      "App\\Controllers\\": "app/controllers/",
+      "Database\\": ""
     }
   },
   "authors": [
-    {+
+    {
       "name": "Godwin Agedah",
       "email": "agedah99@gmail.com"
     }

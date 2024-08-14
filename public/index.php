@@ -4,6 +4,8 @@ session_start();
 // Include Composer's autoload file
 require_once '../vendor/autoload.php';
 
+use Database\Database;
+
 // Parse the URL
 $requestUri = $_SERVER['REQUEST_URI'];
 $urlComponents = parse_url($requestUri);
@@ -17,8 +19,10 @@ $id = isset($requestParts[2]) ? $requestParts[2] : null;
 
 $controllerClass = 'App\\Controllers\\' . ucfirst($controller) . 'Controller';
 
-// Initialize the PDO instance
-$pdo = require '../database.php';
+// Get the PDO connection via the Database class
+$db = new Database();
+$pdo = $db->getConnection();
+
 
 // Check if the class exists and then instantiate it
 if (class_exists($controllerClass)) {

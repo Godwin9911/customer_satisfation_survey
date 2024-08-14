@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Customer Satisfation Survey</title>
+    <title>Customer Satisfaction Survey</title>
 </head>
 
 <body class="bg-gray-100">
@@ -22,7 +22,7 @@
                             </svg>
 
 
-                            Customer Satisfation Survey</a>
+                            Customer Satisfaction Survey</a>
                     </div>
                 </div>
                 <div class="md:block">
